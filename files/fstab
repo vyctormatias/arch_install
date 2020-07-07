@@ -1,0 +1,14 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/sda1
+PARTUUID="3cf5cae4-01"	/			ext4	rw,relatime,data=ordered	0 1
+PARTUUID="4fb1ee1f-01"	/mnt/1Tb		ext4	defaults,owner,nodev		0 0
+/mnt/1Tb/Documents	/home/mhf/Documents	none	defaults,bind			0 0
+/mnt/1Tb/Downloads	/home/mhf/Downloads	none	defaults,bind			0 0
+/mnt/1Tb/Pictures	/home/mhf/Pictures	none	defaults,bind			0 0
+/mnt/1Tb/Musics		/home/mhf/Music		none	defaults,bind			0 0
+/mnt/1Tb/Videos		/home/mhf/Videos	none	defaults,bind			0 0
+
+

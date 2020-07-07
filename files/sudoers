@@ -1,0 +1,35 @@
+## sudoers file.
+##
+## This file MUST be edited with the 'visudo' command as root.
+## Failure to use 'visudo' may result in syntax or file permission errors
+## that prevent sudo from running.
+##
+## See the sudoers man page for the details on how to write a sudoers file.
+##
+
+## Umask
+Defaults umask = 022
+Defaults umask_override
+
+## Use the root password instead of the user
+Defaults targetpw
+
+## Minutes before the sudo password prompt times out
+Defaults passwd_timeout = 1
+Defaults timestamp_timeout = 1
+
+## Number of tries to connect
+Defaults passwd_tries = 2
+
+## This option controls when a password will be required when a user runs sudo with the -v option.
+Defaults verifypw = always
+
+## Locale settings
+Defaults env_keep += "LANG LANGUAGE LINGUAS LC_* _XKB_CHARSET"
+
+## Uncomment to use a hard-coded PATH instead of the user's to find commands
+Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+## User privilege specification
+root ALL=(ALL) ALL
+mhf ALL=(ALL) ALL
